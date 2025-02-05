@@ -6,7 +6,8 @@ let details = {
     email: '',
     phoneNumber: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    agreeTerms: false
 }
 const firstName = document.getElementById("firstName")
 const lastName = document.getElementById("lastName")
@@ -39,10 +40,18 @@ password.addEventListener("change" , (e) => {
 confirmPassword.addEventListener("change" , (e) => {
     const confirmPassword = e.target.value
     details.confirmPassword = e.target.value
+
+//using regular expression, validate if the number is a valid kenyan number
+//if its not, using the alert function, notify the user that the number is not valid
 })
+
+//Add event listenenrs for all remaining input elements and update the details object
+
+function validatePassword(str1, str2) {
+    //confirm password and confirm password are the same
+    //return a boolean if the password match
+}
 submitBtn.addEventListener("click", (e) => {
-    let {firstName, lastName, email, phoneNumber, password, confirmpassword} = details
-    console.log(firstName, lastName, email, phoneNumber, password, confirmpassword)
+    let {firstName, lastName, email, phoneNumber, password, confirmpassword, agreeTerms} = details
+    console.log(firstName, lastName, email, phoneNumber, password, confirmpassword, agreeTerms)
 })
-
-
