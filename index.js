@@ -41,7 +41,8 @@ confirmPassword.addEventListener("change" , (e) => {
     details.confirmPassword = e.target.value
 })
 submitBtn.addEventListener("click", (e) => {
-    console.log(details)
+    let {firstName, lastName, email, phoneNumber, password, confirmpassword} = details
+    console.log(firstName, lastName, email, phoneNumber, password, confirmpassword)
 })
 
 
