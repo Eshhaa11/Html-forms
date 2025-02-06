@@ -36,7 +36,7 @@ phoneNumber.addEventListener("change", (e) => {
         details.phoneNumber = phone;
         console.log("The phone number is Valid. Thanks!");
     } else {
-        alert("THe phone number entered is Invalid, kindly enter a valid phone number");
+        alert("The phone number entered is not a Kenyan number, kindly enter a valid phone number");
         e.target.value = ""; 
     }
 });
