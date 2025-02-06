@@ -17,7 +17,7 @@ body {
     left: -10px; 
     top: 50%;
     transform: translateY(-50%);
-    color: #aaa; 
+    color:  rgb(8, 143, 143); 
 }
 
 input {
@@ -34,19 +34,22 @@ h1 {
 .form-container {
     background: white;
     padding: 15px; 
-    width: 400px; 
+    width: 500px; 
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    font-family: Helvetica;
+    font-size: 16px;
+    color:black;
 }
 
 input {
     width: 100%;
     padding: 1px; 
-    margin: 10px 10px; 
+    margin: 14px 10px; 
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px;
     outline: none;
 }
 
