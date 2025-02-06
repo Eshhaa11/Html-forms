@@ -29,10 +29,18 @@ email.addEventListener("change" , (e) => {
     const email = e.target.value
     details.email = e.target.value
 })
-phoneNumber.addEventListener("change" , (e) => {
-    const phoneNumber = e.target.value
-    details.phoneNumber = e.target.value
-})
+phoneNumber.addEventListener("change", (e) => {
+    const phone = e.target.value;
+    const phoneNumberRegex = /^(?:\+254|0|254)(7\d{8})$/; 
+    if (phoneNumberRegex.test(phone)) {
+        details.phoneNumber = phone;
+        console.log("The phone number is Valid. Thanks!");
+    } else {
+        alert("THe phone number entered is Invalid, kindly enter a valid phone number");
+        e.target.value = ""; 
+    }
+});
+
 password.addEventListener("change" , (e) => {
     const password = e.target.value
     details.password = e.target.value
@@ -41,17 +49,27 @@ confirmPassword.addEventListener("change" , (e) => {
     const confirmPassword = e.target.value
     details.confirmPassword = e.target.value
 
-//using regular expression, validate if the number is a valid kenyan number
-//if its not, using the alert function, notify the user that the number is not valid
+
 })
 
-//Add event listenenrs for all remaining input elements and update the details object
-
-function validatePassword(str1, str2) {
-    //confirm password and confirm password are the same
-    //return a boolean if the password match
+function validatePassword(password, confirmPassword) {
+    if (password === confirmPassword) 
+        return true;
+    else {
+        alert("Passwords do not match. Please re-enter.");
+        return false;
+    }
 }
+
 submitBtn.addEventListener("click", (e) => {
-    let {firstName, lastName, email, phoneNumber, password, confirmpassword, agreeTerms} = details
-    console.log(firstName, lastName, email, phoneNumber, password, confirmpassword, agreeTerms)
-})
+    e.preventDefault();
+    console.log(details)
+    let {firstName, lastName, email, phoneNumber, password, confirmPassword, agreeTerms} = details
+    console.log(firstName, lastName, email, phoneNumber, password, confirmPassword, agreeTerms)
+
+    if (!validatePassword(password, confirmPassword)) {
+        return; 
+    }
+
+    console.log("Your for has been submitted successfully!");
+});
