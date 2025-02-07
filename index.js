@@ -53,8 +53,11 @@ confirmPassword.addEventListener("change" , (e) => {
 })
 
 function validatePassword(password, confirmPassword) {
-    if (password === confirmPassword) 
+    if (password === confirmPassword) {
+        alert("Passwords match.");
         return true;
+    }
+
     else {
         alert("Passwords do not match. Please re-enter.");
         return false;
@@ -67,9 +70,14 @@ submitBtn.addEventListener("click", (e) => {
     let {firstName, lastName, email, phoneNumber, password, confirmPassword, agreeTerms} = details
     console.log(firstName, lastName, email, phoneNumber, password, confirmPassword, agreeTerms)
 
-    if (!validatePassword(password, confirmPassword)) {
-        return; 
+    const isValidated = validatePassword(password,confirmPassword)
+
+    if(isValidated) {
+        window.location.href = "/dashboard.html"
+
+    } else {
+        alert("Passwords donot match")
     }
 
-    console.log("Your for has been submitted successfully!");
+    // console.log("Your for has been submitted successfully!");
 });
