@@ -81,3 +81,11 @@ button:hover {
         width: 90%; 
     }
 }
+
+.alert-on-message {
+    display:block;
+}
+
+.alert-on-message {
+    display: none;
+}

@@ -16,6 +16,7 @@ const phoneNumber = document.getElementById("phoneNumber")
 const password = document.getElementById("password")
 const confirmPassword = document.getElementById("confirmPassword")
 const submitBtn = document.getElementById("submitBtn")
+const alertSpan = document.getElementById("alert-password")
 
 firstName.addEventListener("change" , (e) => {
     const name = e.target.value
@@ -58,10 +59,10 @@ function validatePassword(password, confirmPassword) {
         return true;
     }
 
-    else {
-        alert("Passwords do not match. Please re-enter.");
-        return false;
-    }
+    // else {
+    //     alert("Passwords do not match. Please re-enter.");
+    //     return false;
+    // }
 }
 
 submitBtn.addEventListener("click", (e) => {
@@ -76,8 +77,11 @@ submitBtn.addEventListener("click", (e) => {
         window.location.href = "/dashboard.html"
 
     } else {
-        alert("Passwords donot match")
+        alertSpan.classList.remove("alert-off-message")
+        alertSpan.classList.remove("alert-on-message")
     }
 
     // console.log("Your for has been submitted successfully!");
 });
+
+// alertSpan.classList.remove("alert-off-message")
