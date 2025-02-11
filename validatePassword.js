@@ -1,5 +1,5 @@
 function validatePassword(password, confirmPassword) {
-    if (password === confirmPassword) {
+    if (password === confirmPassword && password.length >= 4 && password !== "" && password.length !== 0) {
         // alert("Passwords match.");
         return true;
     }
