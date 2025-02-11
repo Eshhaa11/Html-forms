@@ -59,10 +59,10 @@ function validatePassword(password, confirmPassword) {
         return true;
     }
 
-    // else {
-    //     alert("Passwords do not match. Please re-enter.");
-    //     return false;
-    // }
+    else {
+        alert("Passwords do not match. Please re-enter.");
+        return false;
+    }
 }
 
 submitBtn.addEventListener("click", (e) => {
