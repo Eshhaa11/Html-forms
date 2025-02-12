@@ -1,4 +1,4 @@
-const {validatePassword, validateNames} = require("../utils")
+const {validatePassword, validateNames, validatephoneNumber} = require("../utils")
 
 test("validate password works as expected", () => {
     expect(validatePassword("s", "S")).toBe(false)
@@ -27,7 +27,7 @@ test("it validates that the first name and last name are more than 4 characters"
 
 })
 
-test("validate PhoneNumber works as expected" , () => {
-    expect(validatePhoneNumber("+254712345678")).toBe(true);
+test("validate phoneNumber works as expected" , () => {
+    expect(validatephoneNumber("+254712345678")).toBe(true);
 
 })
