@@ -40,6 +40,7 @@ test("validate phoneNumber works as expected" , () => {
 test("validate Email works as expected", () => {
     expect(validateEmail("name@example.com")).toBe(true);
     expect(validateEmail("@domain.com")).toBe(false);
+    expect(validateEmail("")).toBe(false);
 
 
 
