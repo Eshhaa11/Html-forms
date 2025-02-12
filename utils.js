@@ -26,15 +26,10 @@ function validatephoneNumber(phoneNumber) {
     return phoneRegex.test(phoneNumber);
 }
 
-
 function validateEmail (Email){
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(Email)
-
-
 }
-
-
 
 module.exports = {
     validatePassword,
