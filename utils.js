@@ -27,9 +27,9 @@ function validatephoneNumber(phoneNumber) {
 }
 
 
-function validateEmail (email){
+function validateEmail (Email){
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return emailRegex.test(email)
+    return emailRegex.test(Email)
 
 
 }
