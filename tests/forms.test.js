@@ -16,15 +16,11 @@ test("validate password works as expected", () => {
     expect(validatePassword("NoNumbersHere", "NoNumbersHere")).toBe(false); 
     expect(validatePassword("12345678", "12345678")).toBe(false); 
     expect(validatePassword("Aa1Bb2Cc3", "Aa1Bb2Cc3")).toBe(true);
-
-
-
 })
 
 test("it validates that the first name and last name are more than 4 characters", () => {
     expect(validateNames("es", "ha")).toBe(false)
     expect(validateNames("Eshaa", "Patel")).toBe(true)
-
 })
 
 test("validate phoneNumber works as expected" , () => {
@@ -34,7 +30,6 @@ test("validate phoneNumber works as expected" , () => {
     expect(validatephoneNumber("254712345678")).toBe(true);
     expect(validatephoneNumber("31300211259")).toBe(false);
     expect(validatephoneNumber("abcdefg")).toBe(false);
-
 });
 
 test("validate Email works as expected", () => {
