@@ -41,6 +41,7 @@ test("validate Email works as expected", () => {
     expect(validateEmail("name@example.com")).toBe(true);
     expect(validateEmail("@domain.com")).toBe(false);
     expect(validateEmail("")).toBe(false);
+    expect(validateEmail("name@example.c")).toBe(false);
 
 
 
