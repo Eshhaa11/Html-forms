@@ -35,12 +35,10 @@ test("validate phoneNumber works as expected" , () => {
     expect(validatephoneNumber("31300211259")).toBe(false);
     expect(validatephoneNumber("abcdefg")).toBe(false);
 
+});
 
-
-
-    
-
-
-
+test("validate Email works as expected", () => {
+    expect(validateEmail("test@.com")).toBe(false);
 
 })
+        
