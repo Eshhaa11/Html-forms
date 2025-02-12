@@ -26,3 +26,4 @@ test("it validates that the first name and last name are more than 4 characters"
     expect(validateNames("Eshaa", "Patel")).toBe(true)
 
 })
+
