@@ -28,7 +28,7 @@ test("it validates that the first name and last name are more than 4 characters"
 })
 
 test("validate phoneNumber works as expected" , () => {
-    expect(validatePhoneNumber("0712345678")).toBe(true); 
+    expect(validatephoneNumber("0712345678")).toBe(true); 
     
 
 
