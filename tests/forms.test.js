@@ -33,7 +33,7 @@ test("validate phoneNumber works as expected" , () => {
     expect(validatephoneNumber("0")).toBe(false);
     expect(validatephoneNumber("254712345678")).toBe(true);
     expect(validatephoneNumber("31300211259")).toBe(false);
-    expect(validatePhoneNumber("abcdefg")).toBe(false);
+    expect(validatephoneNumber("abcdefg")).toBe(false);
 
 
 
