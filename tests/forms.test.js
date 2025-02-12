@@ -38,7 +38,8 @@ test("validate phoneNumber works as expected" , () => {
 });
 
 test("validate Email works as expected", () => {
-    expect(validateEmail("test@.com")).toBe(false);
+    expect(validateEmail("name@.com")).toBe(false);
+    expect(validateEmail("test@example.com")).toBe(true);
 
 })
         
