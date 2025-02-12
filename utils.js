@@ -23,7 +23,7 @@ function validateNames(firstName, lastName){
 
 function validatephoneNumber(phoneNumber) {
     const phoneRegex = /^(?:\+254|0|254)(7\d{8})$/;
-    return phoneRegex.test(phoneNUmber);
+    return phoneRegex.test(phoneNumber);
 }
 
 
@@ -39,7 +39,7 @@ function validateEmail (email){
 module.exports = {
     validatePassword,
     validateNames,
-    validatePhoneNumber,
+    validatephoneNumber,
     validateEmail
 
 }
