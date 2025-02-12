@@ -21,15 +21,15 @@ function validateNames(firstName, lastName){
 
 }
 
-function validatePhoneNumber(phoneNumber){
-    const phoneRegex = /^(?:\+254|0|254)([127]\d{8})$/;
-    return phoneRegex.test(phoneNumber);
-
+function validatephoneNumber(phoneNumber) {
+    const phoneRegex = /^(?:\+254|0|254)(7\d{8})$/;
+    return phoneRegex.test(phoneNUmber);
 }
+
 
 function validateEmail (email){
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return emailRegex.test(email);
+    return emailRegex.test(email)
 
 
 }
